@@ -7,27 +7,23 @@
 import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
-  TouchableHighlight,
+  TouchableOpacity,
   Navigator,
   Text,
   View
 } from 'react-native';
 
 class MyScene extends Component {
+  _onPressButton() {
+    console.log("button tapped");
+  }
+
   render() {
     return (
-      <View>
-        <Text>Current Scene: {this.props.title}</Text>
-
-        <TouchableHighlight onPress={this.props.onForward}>
-          <Text>Tap me to load the next scene</Text>
-        </TouchableHighlight>
-
-        <TouchableHighlight onPress={this.props.onBack}>
-          <Text>Tap me to go back</Text>
-        </TouchableHighlight>
-      </View>
-    )
+      <TouchableOpacity style={{flex: 1, flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}} onPress={this._onPressButton}>
+        <Text>Button</Text>
+      </TouchableOpacity>
+    );
   }
 }
 
