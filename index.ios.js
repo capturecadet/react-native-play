@@ -64,4 +64,27 @@ export default class iostest extends Component {
   }
 }
 
+// Platform specifics
+// const styles = StyleSheet.create({
+//   height: (Platform.OS === 'ios') ? 200 : 100,
+// });
+
+// Platform select
+
+// import { Platform, StyleSheet } from 'react-native';
+//
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     ...Platform.select({
+//       ios: {
+//         backgroundColor: 'red',
+//       },
+//       android: {
+//         backgroundColor: 'blue',
+//       },
+//     }),
+//   },
+// });
+
 AppRegistry.registerComponent('iostest', () => iostest);
